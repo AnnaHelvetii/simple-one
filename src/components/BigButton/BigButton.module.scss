@@ -1,0 +1,9 @@
+@import './../../styles/main.scss';
+
+.bigbutton {
+	border: $border;
+	border-radius: $border-radius;
+	padding: 6px 12px;
+	font-weight: 600;
+}
+

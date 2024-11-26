@@ -1,0 +1,30 @@
+@mixin flex-row-space-between {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+@mixin flex-column-flex-start {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+@mixin flex-center-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin main-font-size-line-height {
+	font-size: 14px;
+	line-height: calc(20px / 14px);
+}
+
+@mixin button-border-padding {
+	padding: 6px;
+	border-radius: $border-radius;
+	border: $border;
+}

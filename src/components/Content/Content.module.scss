@@ -1,0 +1,42 @@
+@import './../../styles/main.scss';
+
+.content {
+	@include flex-column-flex-start;
+	align-items: stretch;
+	flex: 1;
+	padding: 0 16px;
+	border-top: $border;
+
+	.content__header {
+		@include flex-row-space-between;
+		padding: 16px 0;
+
+		.header__left {
+			@include flex-row-space-between;
+			gap: 16px;
+
+			.content__title {
+				font-family: $font-family-secondary;
+				font-size: 20px;
+				line-height: 1.2;
+			}
+
+			@media (max-width: 767px) {
+				flex: 1;
+			}
+		}
+
+		.header__right {
+			@include flex-row-space-between;
+			gap: 4px;
+
+			@media (max-width: 767px) {
+				display: none;
+			}
+		}
+	}
+
+	.content__main {
+
+	}
+}

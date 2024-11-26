@@ -1,10 +1,16 @@
+import Content from './components/Content/Content';
+import Header from './components/Header/Header';
+import Navigation from './components/Navigation/Navigation';
 import './styles/main.scss';
 
 function App() {
 	return (
 		<div className="App">
-			<p className='p1'>Тестовый текст!!!</p>
-			<p className='p2'>Тестовый текст!!!</p>
+			<Header />
+			<div className="main">
+				<Navigation />
+				<Content />
+			</div>
 		</div>
 	);
 }

@@ -1,0 +1,54 @@
+@import './../../styles/main.scss';
+
+.header {
+	@include flex-row-space-between;
+	padding: 8px 16px;
+	flex: 0 0 auto;
+
+	.logo {
+		@media (max-width: 767px) {
+			display: none;
+		}
+	}
+
+	.menu__sidebar {
+		display: none;
+
+		@media (max-width: 767px) {
+			display: block;
+		}
+	}
+
+	.header__menu {
+		@include flex-row-space-between;
+		
+		.menu__input {
+			padding: 8px 6px;
+			margin-right: 16px;
+			height: 32px;
+			width: 296px;
+			border-radius: $border-radius;
+			border: $border;
+
+			@media (max-width: 767px) {
+				display: none;
+			}
+		}
+
+		.menu__user {
+			@include flex-row-space-between;
+			margin-right: 8px;
+			gap: 8px;
+
+			.user__avatar {
+
+				.user__photo {
+				}
+			}
+			
+			.user__name {
+			}
+		}
+	}
+}
+

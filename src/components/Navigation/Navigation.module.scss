@@ -1,0 +1,46 @@
+@import './../../styles/main.scss';
+
+.navigation {
+	@include flex-row-space-between;
+	align-items: flex-start;
+	border: $border;
+
+	.navigation__tab {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+
+		.tab__item {
+			@include flex-center-center;
+			width: 56px;
+			padding: 16px;
+		}
+	}
+
+	.navigation__field {
+		width: 280px;
+		border-left: $border;
+
+		.navigation__search {
+			@include flex-row-space-between;
+			gap: 8px;
+			border-bottom: $border;
+			padding: 16px;
+
+			.navigation__input {
+				@include button-border-padding;
+				height: 32px;
+				flex: 1;
+			}
+		}
+
+		@media (max-width: 991px) {
+			display: none;
+		}
+	}
+
+	@media (max-width: 767px) {
+		display: none;
+	}
+}
