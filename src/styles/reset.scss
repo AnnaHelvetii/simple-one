@@ -1,0 +1,50 @@
+/* Обнуление базовых стилей */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Удаление стандартных стилей ссылок */
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+/* Удаление стандартных списков */
+ul,
+ol {
+	list-style: none;
+}
+
+/* Удаление стандартных отступов для body */
+body {
+	margin: 0;
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* Удаление границ у кнопок и исправление фокуса */
+button {
+	background: none;
+	border: none;
+	cursor: pointer;
+	font: inherit;
+}
+
+/* Удаление стандартных стилей для изображений */
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+/* Удаление стандартных стилей для таблиц */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
