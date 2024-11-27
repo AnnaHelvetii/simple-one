@@ -28,10 +28,25 @@
 			border-bottom: $border;
 			padding: 16px;
 
-			.navigation__input {
+			.input__container {
 				@include button-border-padding;
+				display: flex;
 				height: 32px;
 				flex: 1;
+				position: relative;
+
+				.navigation__input {
+					border: none;
+				}
+
+				.input__filterButton {
+					position: absolute;
+					top: 9px;
+					right: 8px;
+					background: none;
+					border: none;
+					margin-left: 8px;
+				}
 			}
 		}
 

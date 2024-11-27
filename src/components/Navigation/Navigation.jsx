@@ -5,6 +5,7 @@ import star from './../../img/star.svg';
 import SmallButton from '../SmallButton/SmallButton';
 import pin from './../../img/no-pin.svg';
 import NavigationItem from './NavigationItem/NavigationItem';
+import filter from './../../img/filter.svg';
 
 const Navigation = () => {
 	return (
@@ -19,7 +20,12 @@ const Navigation = () => {
 			</div>
 			<div className={styles.navigation__field}>
 				<div className={styles.navigation__search}>
-					<input className={styles.navigation__input} type="text" placeholder='Поиск по меню' />
+					<div className={styles.input__container}>
+						<input className={styles.navigation__input} type="text" placeholder='Поиск по меню' />
+						<button className={styles.input__filterButton}>
+							<img src={filter} alt="filter" />
+						</button>	
+					</div>
 					<SmallButton src={pin} alt="no-pin" />
 				</div>
 				<div className={styles.navigation__list}>

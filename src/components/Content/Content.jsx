@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styles from './Content.module.scss';
 import BigButton from '../BigButton/BigButton';
 import FormItem from './FormItem/FormItem';
@@ -7,6 +7,18 @@ import search from './../../img/search.svg';
 import calendar from './../../img/calendar.svg';
 
 const Content = () => {
+	const [responsibleBadges, setResponsibleBadges] = useState(['Константин Константинопольский']);
+    const [groupBadges, setGroupBadges] = useState(['Support Group']);
+    const [approversBadges, setApproversBadges] = useState(
+		['Андрей Пивоваров', 'Максим Галактионов', 'Алла Лин', 'Константин Константинопольский Константинович', 
+		'Игорь Иванченко', 'Юлия Эйчаровна', 'Артём Подпрыгайко-Саппортов', 'Илья Вазнец', 'Михаил Вортенов',
+		'Наталья Нашевна', 'Евгения Итамовна', 'Алиса Киральчук']);
+	const [whoOpen, setWhoOpen] = useState(['Андрей Пивоваров']);
+	const [whoCreate, setWhoCreate] = useState(['Андрей Пивоваров']);
+
+    const handleRemoveBadge = (setBadges) => (index) => {
+        setBadges((prevBadges) => prevBadges.filter((_, i) => i !== index));
+    };
 	return (
 		<section className={styles.content}>
 			<div className={styles.content__header}>
@@ -44,13 +56,28 @@ const Content = () => {
 						id="half-width"
 					/>
 					<FormItem label="Приоритет" value="Средний" id="half-width" />
-					<InputWithBadges badgesType="default" label="Ответственный" />
-					<InputWithBadges badgesType="default" label="Группа" />
+					<InputWithBadges
+						badgesType="default"
+						label="Ответственный"
+						badges={responsibleBadges}
+						onRemoveBadge={handleRemoveBadge(setResponsibleBadges)}
+					/>
+					<InputWithBadges
+                        badgesType="default"
+                        label="Группа"
+                        badges={groupBadges}
+                        onRemoveBadge={handleRemoveBadge(setGroupBadges)}
+                    />
 					<FormItem 
 						id="full-width" 
 						label="Комментарии" 
 					/>
-					<InputWithBadges badgesType="full-width" label="Согласующие" />
+					<InputWithBadges
+                        badgesType="full-width"
+                        label="Согласующие"
+                        badges={approversBadges}
+                        onRemoveBadge={handleRemoveBadge(setApproversBadges)}
+                    />
 					<FormItem 
 						label="Когда открыто" 
 						value="" 
@@ -69,8 +96,18 @@ const Content = () => {
 							<img src={calendar} alt="calendar" />
 						}
 					/>
-					<InputWithBadges badgesType="default" label="Кем открыто" />
-					<InputWithBadges badgesType="default" label="Кем создано" />
+					<InputWithBadges 
+						badgesType="default" 
+						label="Кем открыто" 
+						badges={whoOpen}
+                        onRemoveBadge={handleRemoveBadge(setWhoOpen)}
+					/>
+					<InputWithBadges 
+						badgesType="default" 
+						label="Кем создано"
+						badges={whoCreate}
+                        onRemoveBadge={handleRemoveBadge(setWhoCreate)} 
+					/>
 				</div>
 			</div>
 

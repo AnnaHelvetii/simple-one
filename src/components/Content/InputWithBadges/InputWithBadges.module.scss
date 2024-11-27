@@ -62,12 +62,6 @@
 			border: none;
 			margin-left: 8px;
 		}
-
-        .inputField {
-            flex: 1 1 auto;
-            border: none;
-            outline: none;
-        }
     }
 
     .actionButton {
@@ -76,7 +70,7 @@
         height: 32px;
         border: $border;
         border-radius: $border-radius;
-        flex-shrink: 0; // Кнопки не должны сжиматься
+        flex-shrink: 0;
 
         .icon {
             width: 20px;
