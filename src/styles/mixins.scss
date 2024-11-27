@@ -33,3 +33,9 @@
 	margin-bottom: 8px;
 	font-weight: 600;
 }
+
+@mixin text-overflow-wrap {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}

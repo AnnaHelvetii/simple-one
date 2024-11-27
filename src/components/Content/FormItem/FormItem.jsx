@@ -5,7 +5,6 @@ import styles from './FormItem.module.scss';
 		label, 
 		id, 
 		value, 
-		onChange, 
 		isRequired = false, 
 		variant = 'half',
 		buttonIcon,
@@ -27,7 +26,6 @@ import styles from './FormItem.module.scss';
 						type="text" 
 						id={id}
 						value={value}
-						onChange={onChange}
 						className={styles.item__input}
 					/>
 					{variant === 'half-with-button' && (

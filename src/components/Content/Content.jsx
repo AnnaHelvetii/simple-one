@@ -55,7 +55,12 @@ const Content = () => {
 						isRequired
 						id="half-width"
 					/>
-					<FormItem label="Приоритет" value="Средний" id="half-width" />
+					<FormItem 
+						label="Приоритет" 
+						value="Средний" 
+						id="half-width" 
+						variant='half'
+					/>
 					<InputWithBadges
 						badgesType="default"
 						label="Ответственный"
@@ -68,7 +73,8 @@ const Content = () => {
                         badges={groupBadges}
                         onRemoveBadge={handleRemoveBadge(setGroupBadges)}
                     />
-					<FormItem 
+					<FormItem
+						variant='full'
 						id="full-width" 
 						label="Комментарии" 
 					/>
