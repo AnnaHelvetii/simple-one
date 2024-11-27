@@ -17,6 +17,11 @@
             align-items: center;
             gap: 4px;
         }
+
+		@media (max-width: 991px) {
+			flex: 1 1 100%;
+			max-width: 100%;
+		}
     }
 
     .item__label {
@@ -43,23 +48,16 @@
     }
 
     .actionButton {
+		@include flex-center-center;
         width: 32px;
         height: 32px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         border: $border;
         border-radius: $border-radius;
-        background-color: #fff;
-        cursor: pointer;
+		flex-shrink: 0;
 
-        svg {
-            width: 16px;
-            height: 16px;
-        }
-
-        &:hover {
-            background-color: #f0f0f0;
+        img {
+            width: 20px;
+            height: 20px;
         }
     }
 

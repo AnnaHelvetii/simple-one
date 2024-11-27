@@ -4,6 +4,7 @@ import BigButton from '../BigButton/BigButton';
 import FormItem from './FormItem/FormItem';
 import InputWithBadges from './InputWithBadges/InputWithBadges';
 import search from './../../img/search.svg';
+import calendar from './../../img/calendar.svg';
 
 const Content = () => {
 	return (
@@ -33,9 +34,7 @@ const Content = () => {
 					<FormItem label="Продукт" value="Platform" id="half-width-button"
 						variant="half-with-button"
 						buttonIcon={
-							<svg viewBox="0 0 24 24">
-								<path d="M12 4v16m8-8H4" stroke="currentColor" strokeWidth="2" fill="none" />
-							</svg>
+							<img src={search} alt="search" />
 						}
 					/>
 					<FormItem 
@@ -58,9 +57,7 @@ const Content = () => {
 						id="half-width-button"
 						variant="half-with-button"
 						buttonIcon={
-							<svg viewBox="0 0 24 24">
-								<path d="M12 4v16m8-8H4" stroke="currentColor" strokeWidth="2" fill="none" />
-							</svg>
+							<img src={calendar} alt="calendar" />
 						}
 					/>
 					<FormItem 
@@ -69,9 +66,7 @@ const Content = () => {
 						id="half-width-button" 
 						variant="half-with-button"
 						buttonIcon={
-							<svg viewBox="0 0 24 24">
-								<path d="M12 4v16m8-8H4" stroke="currentColor" strokeWidth="2" fill="none" />
-							</svg>
+							<img src={calendar} alt="calendar" />
 						}
 					/>
 					<InputWithBadges badgesType="default" label="Кем открыто" />

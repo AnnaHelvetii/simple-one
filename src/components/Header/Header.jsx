@@ -5,6 +5,7 @@ import avatar from './../../img/avatar.png';
 import settings from './../../img/settings.svg';
 import sidebarBl from './../../img/sidebar-black.svg';
 import SmallButton from '../SmallButton/SmallButton';
+import miniSearch from './../../img/mini-search.svg';
 
 const Header = () => {
 	return (
@@ -14,7 +15,12 @@ const Header = () => {
 				<img className={styles.sidebar__image} src={sidebarBl} alt="settings" />
 			</button>
 			<div className={styles.header__menu}>
-				<input className={styles.menu__input} type="text" placeholder='Поиск' />
+				<div className={styles.input__container}>
+					<input className={styles.menu__input} type="text" placeholder='Поиск' />
+					<button className={styles.input__searchButton}>
+						<img src={miniSearch} alt="search" />
+					</button>	
+				</div>
 				<div className={styles.menu__user}>
 					<div className={styles.user__avatar}>
 						<img 

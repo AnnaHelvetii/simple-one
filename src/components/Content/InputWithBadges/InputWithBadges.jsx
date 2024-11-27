@@ -4,14 +4,14 @@ import plus from './../../../img/plus.svg';
 import search from './../../../img/search.svg';
 import micro from './../../../img/micro-button.svg';
 
-const maxBadgeLength = 35;
+const maxBadgeLength = 45;
 
 const InputWithBadges = ({ badgesType = 'default', label }) => {
     const [participants, setParticipants] = useState([]);
     const [inputValue, setInputValue] = useState('');
 
     const truncateBadge = (text) =>
-        text.length > maxBadgeLength ? `${text.slice(0, maxBadgeLength)}...` : text;
+        text.length > maxBadgeLength ? `${text.slice(0, maxBadgeLength)}` : text;
 
     const handleAddParticipant = () => {
         if (inputValue.trim() !== '' && (badgesType === 'full-width' || participants.length === 0)) {

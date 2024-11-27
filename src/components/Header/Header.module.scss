@@ -21,6 +21,10 @@
 
 	.header__menu {
 		@include flex-row-space-between;
+
+		.input__container {
+			position: relative;
+		}
 		
 		.menu__input {
 			padding: 8px 6px;
@@ -29,10 +33,18 @@
 			width: 296px;
 			border-radius: $border-radius;
 			border: $border;
-
 			@media (max-width: 767px) {
 				display: none;
 			}
+		}
+
+		.input__searchButton {
+				position: absolute;
+				top: 8px;
+				right: 24px;
+				background: none;
+				border: none;
+				margin-left: 8px;
 		}
 
 		.menu__user {

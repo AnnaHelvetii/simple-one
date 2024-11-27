@@ -6,46 +6,52 @@
 
     &.default {
         flex: 1 1 calc(50% - 8px);
+
+        @media (max-width: 991px) {
+            flex: 1 1 100%;
+            width: 100%;
+        }
     }
 
     &.fullWidth {
         flex: 1 1 100%;
     }
 
-    @media (max-width: 991px) {
-        flex: 1 1 100%;
-    }
-
     .inputLabel {
-		@include label-input;
+        @include label-input;
     }
 
     .inputRow {
         display: flex;
         align-items: flex-start;
         gap: 4px;
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 100%;
     }
 
     .inputContainer {
-        flex: 1;
-        min-height: 32px;
         display: flex;
-        align-items: center;
         flex-wrap: wrap;
+        align-items: center;
         gap: 4px;
-        padding: 4px;
+        flex: 1 1 auto;
+        padding: 4px 30px 4px 4px;
         border: $border;
-        border-radius: 4px;
-        position: relative;
+        border-radius: $border-radius;
+        min-height: 32px;
+        max-width: 100%;
+		position: relative;
 
-        .badge {
-            display: flex;
-            align-items: center;
+		.badge {
+			max-width: 85%;
             padding: 0 8px;
             background-color: $background-badge;
             border: 1px solid $border-badge;
             border-radius: $border-radius;
             white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
         }
 
 		.removeBadgeButton {
@@ -54,6 +60,7 @@
 			right: 6px;
 			background: none;
 			border: none;
+			margin-left: 8px;
 		}
 
         .inputField {
@@ -69,6 +76,7 @@
         height: 32px;
         border: $border;
         border-radius: $border-radius;
+        flex-shrink: 0; // Кнопки не должны сжиматься
 
         .icon {
             width: 20px;
