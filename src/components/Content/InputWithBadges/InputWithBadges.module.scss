@@ -1,0 +1,78 @@
+@import './../../../styles/main.scss';
+
+.inputWithBadges {
+    display: flex;
+    flex-direction: column;
+
+    &.default {
+        flex: 1 1 calc(50% - 8px);
+    }
+
+    &.fullWidth {
+        flex: 1 1 100%;
+    }
+
+    @media (max-width: 991px) {
+        flex: 1 1 100%;
+    }
+
+    .inputLabel {
+		@include label-input;
+    }
+
+    .inputRow {
+        display: flex;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    .inputContainer {
+        flex: 1;
+        min-height: 32px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 4px;
+        padding: 4px;
+        border: $border;
+        border-radius: 4px;
+        position: relative;
+
+        .badge {
+            display: flex;
+            align-items: center;
+            padding: 0 8px;
+            background-color: $background-badge;
+            border: 1px solid $border-badge;
+            border-radius: $border-radius;
+            white-space: nowrap;
+        }
+
+		.removeBadgeButton {
+			position: absolute;
+			top: 8px;
+			right: 6px;
+			background: none;
+			border: none;
+		}
+
+        .inputField {
+            flex: 1 1 auto;
+            border: none;
+            outline: none;
+        }
+    }
+
+    .actionButton {
+        @include flex-center-center;
+        width: 32px;
+        height: 32px;
+        border: $border;
+        border-radius: $border-radius;
+
+        .icon {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}

@@ -1,0 +1,70 @@
+@import './../../../styles/main.scss';
+
+.form__item {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 calc(50% - 16px);
+
+    &.full {
+        flex: 1 1 100%;
+    }
+
+    &.halfWithButton {
+        flex: 1 1 calc(50% - 16px);
+
+        .inputWrapper {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+    }
+
+    .item__label {
+        @include label-input;
+
+        .required {
+            color: $accent-red;
+            margin-right: 4px;
+        }
+    }
+
+    .inputWrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    .item__input {
+        height: 32px;
+        flex: 1;
+        padding: 6px 8px;
+        border: $border;
+        border-radius: $border-radius;
+        font-size: 14px;
+    }
+
+    .actionButton {
+        width: 32px;
+        height: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: $border;
+        border-radius: $border-radius;
+        background-color: #fff;
+        cursor: pointer;
+
+        svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        &:hover {
+            background-color: #f0f0f0;
+        }
+    }
+
+    @media (max-width: 991px) {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
