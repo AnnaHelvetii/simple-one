@@ -2,8 +2,8 @@
 
 .navigation {
 	@include flex-row-space-between;
-	align-items: flex-start;
-	border: $border;
+	align-items: stretch;
+    min-height: 100vh;
 
 	.navigation__tab {
 		display: flex;

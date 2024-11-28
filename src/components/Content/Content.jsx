@@ -27,7 +27,7 @@ const Content = () => {
 					<BigButton text="Создать" />
 				</div>
 				<div className={styles.header__right}>
-					<BigButton text="Сохранить" />
+					<BigButton text="Сохранить" variant="blue" />
 					<BigButton text="Сохранить и выйти" />
 				</div>
 			</div>
