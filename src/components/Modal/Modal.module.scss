@@ -17,25 +17,15 @@
 	max-height: calc(100vh - 32px);
 
     @media (max-width: 767px) {
+		padding: 0;
         top: 0;
         left: 0;
         transform: none;
 		max-height: 100vh;
         border-radius: 0;
     }
-}
 
-.modalOverlay {
-	@include background-shadow-overlay;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 999;
-}
-
-.modal__header {
+	.modal__header {
 		@include flex-row-space-between;
 		padding: 24px 8px;
 
@@ -88,4 +78,31 @@
 				display: none;
 			}
 		}
+
+		@media (max-width: 767px) {
+			padding: 18px 16px;
+			border-bottom: $border;
+		}
 	}
+
+	.modal__buttons {
+		display: none;
+
+		@media (max-width: 767px) {
+			display: flex;
+			flex-direction: column;
+			padding: 0 16px 16px 16px;
+			gap: 16px;
+		}
+	}
+}
+
+.modalOverlay {
+	@include background-shadow-overlay;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+}
