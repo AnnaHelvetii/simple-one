@@ -5,7 +5,7 @@ import InputWithBadges from './../InputWithBadges/InputWithBadges';
 import search from './../../../img/search.svg';
 import calendar from './../../../img/calendar.svg';
 
-const Content = ({ mainTitle, style }) => {
+const Content = ({ mainTitle }) => {
 	const responsibleBadges = ['Константин Константинопольский'];
     const groupBadges = ['Support Group'];
     const approversBadges = 
@@ -17,7 +17,7 @@ const Content = ({ mainTitle, style }) => {
 
 	return (
 		<>
-			<div className={styles.content__main} style={style}>
+			<div className={styles.content__main} >
 				<p className={styles.main__title}>
 					{mainTitle}
 				</p>

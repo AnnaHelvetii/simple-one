@@ -27,7 +27,7 @@
 
 	.modal__header {
 		@include flex-row-space-between;
-		padding: 24px 8px;
+		padding: 12px 8px 24px 8px;
 
 		.header__left {
 			@include flex-row-space-between;
@@ -80,8 +80,14 @@
 		}
 
 		@media (max-width: 767px) {
-			padding: 18px 16px;
+			padding: 16px 18px;
 			border-bottom: $border;
+		}
+	}
+
+	.content__wrapper {
+		@media (max-width: 767px) {
+			padding: 16px 16px 0 16px;
 		}
 	}
 
@@ -91,7 +97,7 @@
 		@media (max-width: 767px) {
 			display: flex;
 			flex-direction: column;
-			padding: 0 16px 16px 16px;
+			padding: 16px 16px;
 			gap: 16px;
 		}
 	}

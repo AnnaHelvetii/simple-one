@@ -4,7 +4,7 @@ import styles from './FormItem.module.scss';
 	const FormItem = ({ 
 		label, 
 		id, 
-		value, 
+		defaultValue, 
 		isRequired = false, 
 		variant = 'half',
 		buttonIcon,
@@ -24,7 +24,7 @@ import styles from './FormItem.module.scss';
 					<input 
 						type="text" 
 						id={id}
-						value={value}
+						value={defaultValue}
 						className={styles.item__input}
 					/>
 					{variant === 'half-with-button' && (
