@@ -8,7 +8,6 @@ import styles from './FormItem.module.scss';
 		isRequired = false, 
 		variant = 'half',
 		buttonIcon,
-		onButtonClick
 	}) => {
 		return (
 			<div 
@@ -29,7 +28,7 @@ import styles from './FormItem.module.scss';
 						className={styles.item__input}
 					/>
 					{variant === 'half-with-button' && (
-						<button type="button" className={styles.actionButton} onClick={onButtonClick}>
+						<button type="button" className={styles.actionButton}>
 							{buttonIcon}
 						</button>
 					)}
