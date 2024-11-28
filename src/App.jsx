@@ -12,9 +12,7 @@ function App() {
 			<div className="main">
 				<Navigation />
 				<section className="content">
-					<Content 
-						mainTitle="STSK0004783 На инциденте, запросе, проблеме, в статусе закрыто некоторые поля остаются редактируемыми для агента если он Caller"
-					/>
+					<Content />
 				</section>
 			</div>
 		</div>

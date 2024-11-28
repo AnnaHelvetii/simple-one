@@ -1,25 +1,25 @@
-import React, {useState} from 'react';
+import React from 'react';
 import styles from './ContentBody.module.scss';
 import FormItem from './../FormItem/FormItem';
 import InputWithBadges from './../InputWithBadges/InputWithBadges';
 import search from './../../../img/search.svg';
 import calendar from './../../../img/calendar.svg';
 
-const Content = () => {
-	const [responsibleBadges, setResponsibleBadges] = useState(['Константин Константинопольский']);
-    const [groupBadges, setGroupBadges] = useState(['Support Group']);
-    const [approversBadges, setApproversBadges] = useState(
+const Content = ({ mainTitle }) => {
+	const responsibleBadges = ['Константин Константинопольский'];
+    const groupBadges = ['Support Group'];
+    const approversBadges = 
 		['Андрей Пивоваров', 'Максим Галактионов', 'Алла Лин', 'Константин Константинопольский Константинович', 
 		'Игорь Иванченко', 'Юлия Эйчаровна', 'Артём Подпрыгайко-Саппортов', 'Илья Вазнец', 'Михаил Вортенов',
-		'Наталья Нашевна', 'Евгения Итамовна', 'Алиса Киральчук']);
-	const [whoOpen, setWhoOpen] = useState(['Андрей Пивоваров']);
-	const [whoCreate, setWhoCreate] = useState(['Андрей Пивоваров']);
+		'Наталья Нашевна', 'Евгения Итамовна', 'Алиса Киральчук'];
+	const whoOpen = ['Андрей Пивоваров'];
+	const whoCreate = ['Андрей Пивоваров'];
 
 	return (
 		<>
 			<div className={styles.content__main}>
 				<p className={styles.main__title}>
-					STSK0004783 На инциденте, запросе, проблеме, в статусе закрыто некоторые поля остаются редактируемыми для агента если он Caller
+					{mainTitle}
 				</p>
 				<div className={styles.form__container}>
 					<FormItem 

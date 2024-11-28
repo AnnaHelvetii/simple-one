@@ -67,6 +67,10 @@
 				.badge__title {
 					@include text-overflow-wrap;
 				}
+
+				img {
+					cursor: pointer;
+				}
 			}
 		}
 

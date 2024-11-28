@@ -39,3 +39,8 @@
 	text-overflow: ellipsis;
 	overflow: hidden;
 }
+
+@mixin background-shadow-overlay {
+	background-color: $backgroung-shadow;
+	opacity: 40%;
+}

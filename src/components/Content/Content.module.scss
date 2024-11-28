@@ -1,13 +1,5 @@
 @import './../../styles/main.scss';
 
-// .content {
-// 	@include flex-column-flex-start;
-// 	align-items: stretch;
-// 	padding: 0 16px;
-// 	border-left: $border;
-// 	overflow: hidden;
-// 	min-height: 100vh;
-
 	.content__header {
 		@include flex-row-space-between;
 		padding: 16px 0;
