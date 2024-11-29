@@ -19,6 +19,7 @@
 	.navigation__field {
 		width: 280px;
 		border-left: $border;
+		border-right: $border;
 
 		.navigation__search {
 			@include flex-row-space-between;

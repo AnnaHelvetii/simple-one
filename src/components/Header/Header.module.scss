@@ -2,9 +2,13 @@
 
 .header {
 	@include flex-row-space-between;
+	width: 100%;
+	background-color: $background-color;
 	padding: 8px 16px;
 	flex: 0 0 auto;
 	border-bottom: $border;
+	position: sticky;
+
 
 	.logo {
 		@media (max-width: 767px) {
@@ -83,6 +87,10 @@
 		@media (max-width: 767px) {
 			gap: 16px;
 		}
+	}
+
+	@media (max-width: 767px) {
+		position: static;
 	}
 }
 

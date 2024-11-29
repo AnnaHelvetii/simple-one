@@ -1,6 +1,8 @@
 @import './../../styles/main.scss';
 
 .bigbutton {
+	@include flex-center-center;
+	height: 32px;
 	border: $border;
 	border-radius: $border-radius;
 	background-color: $background-color;

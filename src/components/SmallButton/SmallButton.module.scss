@@ -1,6 +1,7 @@
 @import './../../styles/main.scss';
 
 .smallbutton {
+	@include flex-center-center;
 	@include button-border-padding;
 	@include small-button-size;
 

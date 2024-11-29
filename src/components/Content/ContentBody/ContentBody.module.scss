@@ -2,8 +2,6 @@
 
 	.content__main {
 		@include flex-column-flex-start;
-		padding: 0 16px;
-		border-left: $border;
 
 		.main__title {
 			@include text-overflow-wrap;
