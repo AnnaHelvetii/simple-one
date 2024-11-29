@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/simple-one/static/css/main.064bcc25.css",
+    "main.css": "/simple-one/static/css/main.887189ad.css",
     "main.js": "/simple-one/static/js/main.9ae0e3a6.js",
     "static/media/montserrat-latin-700italic.woff": "/simple-one/static/media/montserrat-latin-700italic.6779372f04095051c62e.woff",
     "static/media/montserrat-latin-800italic.woff": "/simple-one/static/media/montserrat-latin-800italic.fe82abb0bcede51bf724.woff",
@@ -73,11 +73,11 @@
     "static/media/arrow.svg": "/simple-one/static/media/arrow.93c2bfe0fa9221449c1229ae09a4086a.svg",
     "static/media/sidebar-black.svg": "/simple-one/static/media/sidebar-black.6a6b51aeacb0b8540b343be650be2663.svg",
     "static/media/sidebar.svg": "/simple-one/static/media/sidebar.cf6bb9a342d083231119badc1ed638d3.svg",
-    "main.064bcc25.css.map": "/simple-one/static/css/main.064bcc25.css.map",
+    "main.887189ad.css.map": "/simple-one/static/css/main.887189ad.css.map",
     "main.9ae0e3a6.js.map": "/simple-one/static/js/main.9ae0e3a6.js.map"
   },
   "entrypoints": [
-    "static/css/main.064bcc25.css",
+    "static/css/main.887189ad.css",
     "static/js/main.9ae0e3a6.js"
   ]
 }
