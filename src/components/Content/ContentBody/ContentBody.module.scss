@@ -2,6 +2,8 @@
 
 	.content__main {
 		@include flex-column-flex-start;
+		padding: 0 16px;
+		border-left: $border;
 
 		.main__title {
 			@include text-overflow-wrap;
@@ -18,9 +20,7 @@
 		}
 
 		.form__container {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: space-between;
+			@include flex-wrap-space-between;
 			gap: 16px;
 			margin-top: 24px;
 		}

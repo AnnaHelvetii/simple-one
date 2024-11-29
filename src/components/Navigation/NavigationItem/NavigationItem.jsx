@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './NavigationItem.module.scss';
-import arrow from './arrow.svg';
+import arrow from './../../../img/arrow.svg';
 
 const NavigationItem = ({ text }) => {
 	return (

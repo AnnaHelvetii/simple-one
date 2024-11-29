@@ -58,8 +58,7 @@
 
 			@media (max-width: 767px) {
 				@include flex-center-center;
-				width: 32px;
-				height: 32px;
+				@include small-button-size;
 				border: $border;
 				border-radius: $border-radius;
 
@@ -95,8 +94,7 @@
 		display: none;
 
 		@media (max-width: 767px) {
-			display: flex;
-			flex-direction: column;
+			@include flex-column;
 			padding: 16px 16px;
 			gap: 16px;
 		}

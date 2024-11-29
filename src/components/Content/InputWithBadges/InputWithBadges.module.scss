@@ -1,9 +1,8 @@
 @import './../../../styles/main.scss';
 
 .inputWithBadges {
+    @include flex-column;
 	@include text-overflow-wrap;
-    display: flex;
-    flex-direction: column;
 
     &.default {
         flex: 1 1 calc(50% - 8px);
@@ -24,25 +23,22 @@
     }
 
     .inputRow {
-        display: flex;
-        align-items: flex-start;
+        @include flex-flex-start;
         gap: 4px;
         flex-grow: 1;
         flex-shrink: 1;
         flex-basis: 100%;
 
 		.inputContainer {
-			display: flex;
-			flex-wrap: wrap;
-			align-items: center;
+			@include flex-wrap-center;
 			gap: 4px;
 			flex: 1 1 auto;
+			min-width: 0;
+			max-width: 100%;
+			min-height: 32px;
 			padding: 4px 30px 4px 4px;
 			border: $border;
 			border-radius: $border-radius;
-			min-width: 0;
-			min-height: 32px;
-			max-width: 100%;
 			position: relative;
 
 			.removeBadgeButton {
@@ -56,8 +52,7 @@
 
 			.badge {
 				@include text-overflow-wrap;
-				display: flex;
-				align-items: center;
+				@include flex-align-center;
 				gap: 8px;
 				padding: 0 8px;
 				background-color: $background-badge;
@@ -76,15 +71,13 @@
 
 		.actionButton {
 			@include flex-center-center;
-			width: 32px;
-			height: 32px;
+			@include small-button-size;
 			border: $border;
 			border-radius: $border-radius;
 			flex-shrink: 0;
 
 			.icon {
-				width: 20px;
-				height: 20px;
+				@include img-size;
 			}
 		}	
     }

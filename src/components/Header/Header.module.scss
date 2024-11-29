@@ -62,12 +62,10 @@
 			gap: 8px;
 
 			.user__avatar {
-				width: 32px;
-				height: 32px;
+				@include avatar-size;
 
 				@media (max-width: 767px) {
-					width: 24px;
-					height: 24px;
+					@include mobile-img-size;
 				}
 			}
 			

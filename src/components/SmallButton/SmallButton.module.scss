@@ -2,12 +2,10 @@
 
 .smallbutton {
 	@include button-border-padding;
-	height: 32px;
-	width: 32px;
+	@include small-button-size;
 
 	.smallbutton__image{
-		width: 20px;
-		height: 20px;
+		@include mobile-img-size;
 	}
 }
 

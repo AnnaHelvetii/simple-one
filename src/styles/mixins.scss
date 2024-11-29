@@ -9,12 +9,38 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
-	// align-items: center;
+}
+
+@mixin flex-column {
+	display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-flex-start {
+	display: flex;
+    align-items: flex-start;
 }
 
 @mixin flex-center-center {
 	display: flex;
 	justify-content: center;
+	align-items: center;
+}
+
+@mixin flex-align-center {
+	display: flex;
+    align-items: center;
+}
+
+@mixin flex-wrap-space-between {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+@mixin flex-wrap-center {
+	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
 }
 
@@ -43,4 +69,24 @@
 @mixin background-shadow-overlay {
 	background-color: $backgroung-shadow;
 	opacity: 40%;
+}
+
+@mixin img-size {
+	width: 20px;
+	height: 20px;
+}
+
+@mixin avatar-size {
+	width: 32px;
+    height: 32px;
+}
+
+@mixin mobile-img-size {
+	width: 24px;
+	height: 24px;
+}
+
+@mixin small-button-size {
+	width: 32px;
+    height: 32px;
 }

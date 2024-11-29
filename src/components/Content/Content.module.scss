@@ -1,8 +1,26 @@
 @import './../../styles/main.scss';
 
-	.content__header {
-		@include flex-row-space-between;
-		padding: 16px 0;
+.content {
+	display: flex;
+    flex-direction: column;
+    height: 100vh; 
+
+		&__header {
+			@include flex-row-space-between;
+			position: sticky;
+			top: 0;
+			padding: 16px;
+			z-index: 10;
+			border-left: $border;
+			transition: box-shadow 0.2s ease;
+
+			@media (max-width: 767px) {
+				position: static;
+			}
+
+			&Shadow {
+				box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+			}
 
 		.header__left {
 			@include flex-row-space-between;
@@ -37,3 +55,10 @@
 			}
 		}
 	}
+
+	.content__body {
+		flex: 1;
+		overflow-y: auto;
+	}
+}
+

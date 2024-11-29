@@ -1,8 +1,7 @@
 @import './../../../styles/main.scss';
 
 .form__item {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     flex: 1 1 calc(50% - 16px);
 
     &.full {
@@ -13,8 +12,7 @@
         flex: 1 1 calc(50% - 16px);
 
         .inputWrapper {
-            display: flex;
-            align-items: center;
+            @include flex-align-center;
             gap: 4px;
         }
 
@@ -34,8 +32,7 @@
     }
 
     .inputWrapper {
-        display: flex;
-        align-items: center;
+        @include flex-align-center;
     }
 
     .item__input {
@@ -49,15 +46,13 @@
 
     .actionButton {
 		@include flex-center-center;
-        width: 32px;
-        height: 32px;
+        @include small-button-size;
         border: $border;
         border-radius: $border-radius;
 		flex-shrink: 0;
 
         img {
-            width: 20px;
-            height: 20px;
+            @include img-size;
         }
     }
 

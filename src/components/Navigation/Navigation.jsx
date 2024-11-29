@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from './Navigation.module.scss';
+import SmallButton from '../SmallButton/SmallButton';
+import NavigationItem from './NavigationItem/NavigationItem';
 import sidebarBlue from './../../img/sidebar.svg';
 import star from './../../img/star.svg';
-import SmallButton from '../SmallButton/SmallButton';
 import pin from './../../img/no-pin.svg';
-import NavigationItem from './NavigationItem/NavigationItem';
 import filter from './../../img/filter.svg';
 
 const Navigation = () => {

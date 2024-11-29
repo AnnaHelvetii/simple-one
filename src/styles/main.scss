@@ -24,8 +24,8 @@ body {
 .content {
 	@include flex-column-flex-start;
 	align-items: stretch;
-	padding: 0 16px;
-	border-left: $border;
-	overflow: hidden;
 	min-height: 100vh;
+	// padding: 0 16px;
+	// border-left: $border;
+	overflow: hidden;
 }
